@@ -1,5 +1,3 @@
-# SQL-ETL-Pipeline-Simulation
-
 create database pipeline;
 
 use pipeline;
@@ -76,3 +74,13 @@ begin
 	delete from staging_customers
     where customer_id in ( select customer_id from prod_customers);
 end;
+
+-- Step 6 : Export Final Data
+-- Use DB Browser or Oracle SQL Developer to export:
+-- -- Cleaned prod_customers table
+-- -- ETL log from etl_audit
+
+-- 5. Conclusion
+-- This project provides practical experience in building an SQL-based ETL pipeline using Oracle SQL.
+-- From ingesting raw data to automating the cleanup process using triggers, the simulation covers essential operations used in data engineering and analytics projects.
+-- The resulting production tables and audit logs are clean, well-documented, and export-ready.
